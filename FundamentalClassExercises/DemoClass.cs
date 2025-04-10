@@ -23,15 +23,5 @@ namespace FundamentalClassExercises
 
             Console.WriteLine(dateString);
         }
-
-
-        public static void DisplayHelloWorld()
-        {
-            string dateString = todaysDate.ToString();
-
-            Console.WriteLine(dateString);
-
-            Console.WriteLine("Hello");
-        }
     }
 }

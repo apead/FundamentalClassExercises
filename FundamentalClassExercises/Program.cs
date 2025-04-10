@@ -30,11 +30,13 @@
         static void Main(string[] args)
         {
 
+          // string myString = new String("Hello");
+
             ClassExercises myClassExercises = new ClassExercises();
 
             //  Capturing a string from the keyboard 
 
-            Console.WriteLine("Please enter a sentence to reverse.");
+            Console.WriteLine("Please enter a sentence.");
             string forwardString = string.Empty;
 
             forwardString = Console.ReadLine();
@@ -68,6 +70,14 @@
                 Console.WriteLine("The provided numbers array contains atleast 1 odd number");
             else
                 Console.WriteLine("The provided numbers array does not contain any odd numbers.");
+
+
+            Console.WriteLine("This is the sentence without Vowels");
+
+            string sentenceWithoutVowels = myClassExercises.RemoveVowels(forwardString);
+            Console.WriteLine(sentenceWithoutVowels);
+
+
         }
 
 

@@ -140,5 +140,25 @@ namespace FundamentalClassExercises
 
             return reversedString;
         }
+
+
+        public string RemoveVowels(string sentence)
+        {
+            char[] vowels = { 'a', 'e', 'i','o','u' };
+
+            string sentenceNoVowels = string.Empty;
+           
+            foreach(char letter in sentence)
+            {
+                
+                if (!vowels.Contains(char.ToLower(letter)))
+                {
+                    sentenceNoVowels = sentenceNoVowels + letter;
+                }
+            }
+
+            
+            return sentenceNoVowels;
+        }
     }
 }
