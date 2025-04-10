@@ -77,10 +77,33 @@
             string sentenceWithoutVowels = myClassExercises.RemoveVowels(forwardString);
             Console.WriteLine(sentenceWithoutVowels);
 
+            int[] numbersitiveNegative = { -1, 2, 4, 6, 9};
 
+            PositivesAndNegatives positivesAndNegatives = myClassExercises.CalculatePositivesAndNegatives(numbersitiveNegative);
+
+            Console.WriteLine($"Total Positive:   {positivesAndNegatives.NumberPositive}  Total Negative: {positivesAndNegatives.NumberNegative}");
+
+
+            double[] numbersToAverage = new double[5];
+
+
+            for (int x = 0; x < numbersToAverage.Length; x++)
+            {
+                Console.WriteLine($"Please enter a number {x+1}");
+
+                string num;
+                num = Console.ReadLine();
+
+                numbersToAverage[x] = Convert.ToDouble(num);
+            }
+
+            double average = myClassExercises.CalculateAverages(numbersToAverage);
+
+            Console.WriteLine($"Average = {average}");
         }
 
 
-       
+
+
     }
 }

@@ -151,7 +151,7 @@ namespace FundamentalClassExercises
             foreach(char letter in sentence)
             {
                 
-                if (!vowels.Contains(char.ToLower(letter)))
+               if (!vowels.Contains(char.ToLower(letter)))
                 {
                     sentenceNoVowels = sentenceNoVowels + letter;
                 }
@@ -159,6 +159,39 @@ namespace FundamentalClassExercises
 
             
             return sentenceNoVowels;
+        }
+
+        public PositivesAndNegatives CalculatePositivesAndNegatives(int[] numbers)
+        {
+            PositivesAndNegatives positivesAndNegatives = new PositivesAndNegatives();
+            
+            
+
+            foreach(int number in numbers)
+            {
+                if (number > 0)
+                    positivesAndNegatives.NumberPositive++;
+                else
+                    positivesAndNegatives.NumberNegative++;
+
+            }
+
+            return positivesAndNegatives;
+        }
+       
+        public double CalculateAverages(double[] numbers)
+        {
+            double average=0;
+            double total=0;
+
+            foreach(double number in numbers)
+            {
+                total = total + number;
+            }
+
+            average = total / numbers.Length;
+
+            return average;
         }
     }
 }
